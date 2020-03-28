@@ -1,0 +1,173 @@
+@font-face {
+  font-family: 'Shadows Into Light';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Shadows Into Light'), local('ShadowsIntoLight'), url(https://fonts.gstatic.com/s/shadowsintolight/v9/UqyNK9UOIntux_czAvDQx_ZcHqZXBNQzdcD8.ttf) format('truetype');
+}
+html {
+  font-size: 16px;
+  font-family: "Shadows Into Light", cursive;
+}
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+          justify-content: center;
+  background-color: #000;
+  color: #fff;
+}
+.a-title {
+  font-size: 10rem;
+  text-align: center;
+}
+.a-message {
+  font-size: 2rem;
+  text-align: center;
+}
+.o-cat {
+  width: 35vh;
+  margin: auto;
+  padding: 3rem;
+}
+.m-ear,
+.m-eye {
+  background-color: #fff;
+}
+.m-ears {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  padding: 1vh 0.5vh;
+  z-index: 1;
+}
+.m-ear {
+  height: 14vh;
+  width: 10vh;
+  border-radius: 40% 70% 10% 10% / 100% 100% 10% 10%;
+  position: relative;
+}
+.m-ear.-left {
+  -webkit-transform: rotateZ(15deg);
+          transform: rotateZ(15deg);
+}
+.m-ear.-right {
+  -webkit-transform: rotateY(180deg) rotateZ(15deg);
+          transform: rotateY(180deg) rotateZ(15deg);
+}
+.m-ear:after,
+.m-ear:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background-color: #000;
+  bottom: 0;
+  right: 70%;
+  border-radius: 50%;
+}
+.m-ear:after {
+  height: 40%;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+.m-ear:before {
+  height: 35%;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+.m-face {
+  position: relative;
+  background-color: #000;
+  border-radius: 100% 100% 0 0;
+  margin: -8vh auto 0;
+  padding: 8vh 0 6vh;
+  width: 90%;
+}
+.m-eyes {
+  display: -webkit-box;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.m-eye {
+  width: 10vh;
+  height: 8vh;
+  border-radius: 70%;
+  position: relative;
+}
+.m-eye:before {
+  content: "";
+  position: absolute;
+  height: 50%;
+  left: -2vh;
+  right: -2vh;
+  background-color: #000;
+  border-radius: 0 0 35% 35%;
+  z-index: 2;
+  -webkit-animation: eyes 5s ease infinite;
+          animation: eyes 5s ease infinite;
+}
+.m-eye:after {
+  content: "";
+  width: 10%;
+  height: 15%;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 40%;
+}
+.m-eye.-left:after {
+  right: -5%;
+}
+.m-eye.-right:after {
+  left: -5%;
+}
+.a-eyePupil {
+  background-color: #000;
+  width: 30%;
+  left: 35%;
+}
+.a-eyePupil,
+.a-eyePupil:after {
+  position: absolute;
+  height: 50%;
+  border-radius: 50%;
+  top: 25%;
+}
+.a-eyePupil:after {
+  content: "";
+  background-color: #fff;
+  width: 20%;
+  left: 20%;
+}
+.m-nose {
+  border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+  background-color: #fff;
+  width: 4vh;
+  height: 2vh;
+  margin: auto;
+}
+@-webkit-keyframes eyes {
+  0%,
+  5%,
+  100% {
+    height: 50%;
+  }
+  2% {
+    height: 110%;
+  }
+}
+@keyframes eyes {
+  0%,
+  5%,
+  100% {
+    height: 50%;
+  }
+  2% {
+    height: 110%;
+  }
+}
